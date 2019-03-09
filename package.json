@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@expo/samples": "2.1.1",
+    "@expo/vector-icons": "^9.0.0",
     "expo": "^32.0.0",
-    "native-base": "^2.12.1",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
     "react-native-vector-icons": "^6.3.0",
