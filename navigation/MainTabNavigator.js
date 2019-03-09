@@ -20,7 +20,7 @@ HomeStack.navigationOptions = {
   tabBarIcon: ({ tintColor, focused }) => (
     <TabBarIcon
       focused={focused}
-      name={'ios-home'} size={20} style={{ color: tintColor}}
+      name={'home'} size={20} style={{ color: tintColor}}
     />
   ),
 };
@@ -34,7 +34,7 @@ TrendingStack.navigationOptions = {
   tabBarIcon: ({ tintColor, focused }) => (
     <TabBarIcon
       focused={focused}
-      name={'ios-flame'} size={20} style={{ color: tintColor}}
+      name={'whatshot'} size={20} style={{ color: tintColor}}
     />
   ),
 };
@@ -49,15 +49,15 @@ SubscriptionsStack.navigationOptions = {
     <View style={{ width: 24, height: 24, margin: 5 }}>
             <TabBarIcon
               focused={focused}
-              name={'ios-play-circle'} size={20} style={{ color: tintColor}}
+              name={'subscriptions'} size={20} style={{ color: tintColor}}
             />
           <View
             style={{
               // /If you're using react-native < 0.57 overflow outside of the parent
               // will not work on Android, see https://git.io/fhLJ8
               position: 'absolute',
-              right: 2,
-              top: 1,
+              right: 0,
+              top: 0,
               backgroundColor: 'red',
               borderRadius: 6,
               width: 8,
@@ -82,7 +82,7 @@ InboxStack.navigationOptions = {
   tabBarIcon: ({ tintColor, focused }) => (
     <TabBarIcon
       focused={focused}
-      name={'ios-mail'} size={20} style={{ color: tintColor}}
+      name={'mail'} size={20} style={{ color: tintColor}}
     />
   ),
 };
@@ -96,7 +96,7 @@ LibraryStack.navigationOptions = {
   tabBarIcon: ({ tintColor, focused }) => (
     <TabBarIcon
       focused={focused}
-      name={'ios-folder'} size={20} style={{ color: tintColor}}
+      name={'folder'} size={20} style={{ color: tintColor}}
     />
   ),
 };
