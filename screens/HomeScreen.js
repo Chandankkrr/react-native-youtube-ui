@@ -81,7 +81,7 @@ export default class HomeScreen extends React.Component {
     } else {
       return (
         <Text style={styles.developmentModeText}>
-          You are not in development mode, your app will run at full speed.
+          You are not in development mode, your app will run at full speed......
         </Text>
       );
     }
