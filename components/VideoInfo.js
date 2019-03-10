@@ -4,12 +4,12 @@ import {
   View,
   Image,
   StyleSheet,
-  TouchableOpacity
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons'
-import Icons from 'react-native-vector-icons/MaterialCommunityIcons'
+
+import VideoOptions from './VideoOptions';
 
 export default class VideoInfo extends Component {
+
   render() {
     return (
       <View style={styles.container}>
@@ -26,9 +26,7 @@ export default class VideoInfo extends Component {
         </Text>
       </View>
       <View>
-        <TouchableOpacity style={{paddingHorizontal: 15}}>
-          <Icon name='more-vert' size={25} color={'#3e3e3e'} />
-        </TouchableOpacity>
+        <VideoOptions />
       </View>
     </View>
     )

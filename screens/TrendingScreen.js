@@ -1,19 +1,40 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
-import { ExpoLinksView } from '@expo/samples';
+import { Image, View, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export default class LinksScreen extends React.Component {
   static navigationOptions = {
-    title: 'Links',
+    headerStyle: {
+      backgroundColor: "#121212",
+      borderBottomWidth: 0
+    },
+    headerLeft: <Image 
+    source = {require('../assets/images/yt_logo_rgb_dark.png')}
+    style = {{ height: 22, width: 98, marginLeft: 10, }}
+    />,
+     headerRight: (
+      <View style={{ flexDirection: 'row', marginRight: 10 }}>
+        <TouchableOpacity style={{paddingHorizontal: 15}}>
+          <Icon name='cast' size={25} color={'#fff'} />
+        </TouchableOpacity>
+        <TouchableOpacity style={{paddingHorizontal: 15}}>
+          <Icon name='videocam' size={25} color={'#fff'} />
+        </TouchableOpacity>
+        <TouchableOpacity style={{paddingHorizontal: 15}}>
+          <Icon name='search' size={25} color={'#fff'} />
+        </TouchableOpacity>
+         <TouchableOpacity style={{paddingHorizontal: 15}}>
+          <Icon name='account-circle' size={25} color={'#fff'}/>
+        </TouchableOpacity>
+      </View>
+    )
   };
 
   render() {
     return (
-      <ScrollView style={styles.container}>
-        {/* Go ahead and delete ExpoLinksView and replace it with your
-           * content, we just wanted to provide you with some helpful links */}
-        <ExpoLinksView />
-      </ScrollView>
+      <View style={styles.container}>
+        <Text style={{textAlign:"center", color:"#fff"}}>Trending</Text>
+      </View>
     );
   }
 }
@@ -21,7 +42,8 @@ export default class LinksScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#121212',
     paddingTop: 15,
-    backgroundColor: '#fff',
+    justifyContent: "center",
   },
 });
