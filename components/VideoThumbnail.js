@@ -6,6 +6,8 @@ import {
     ImageBackground
 } from 'react-native';
 
+import VideoLength from './VideoLength';
+
 export default class VideoInfo extends React.Component {
 
     render() { 
@@ -15,9 +17,9 @@ export default class VideoInfo extends React.Component {
                     <ImageBackground
                         style={styles.thumbnail}
                         source = {{ uri: 'https://images.unsplash.com/photo-1551973932-8131a944f98e'}} />
-                <View >
-                    <Text style={styles.videoLengthText}>4:58</Text>
-                </View>
+                <VideoLength 
+                    style={styles.videoLengthText}
+                    videoLength="4:58" />
             </View>
             </View>
          );
@@ -34,16 +36,15 @@ const styles = StyleSheet.create({
         width: null,
         height: 200,
     },
-    videoLengthText:{
+    videoLengthText: {
         position: "absolute",
         right: 0,
-        top: -25,
+        top: -35,
         backgroundColor: "black",
         color: "white",
-        //width: 40,
-        borderRadius: 10,
-        paddingHorizontal: 10,
+        borderRadius: 30,
+        padding: 5,
         marginRight: 5,
         textAlign: "right",
     }
-})
+});
