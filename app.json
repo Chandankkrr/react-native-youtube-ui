@@ -10,9 +10,11 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/yt_icon_rgb.png",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/youtube_splash.png",
+      "width": 100,
+      "height": 100,
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -24,6 +26,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "",
+    "githubUrl": "https://github.com/Chandankkrr/react-native-youtube-ui"
   }
 }

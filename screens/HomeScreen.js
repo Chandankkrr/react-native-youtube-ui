@@ -7,11 +7,10 @@ import {
   Text,
   TouchableOpacity,
   View,
+  StatusBar
 } from 'react-native';
 import { WebBrowser } from 'expo';
-import { MonoText } from '../components/StyledText';
-import Icon from 'react-native-vector-icons/MaterialIcons'
-import Icons from 'react-native-vector-icons/MaterialCommunityIcons'
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import VideoThumbnail from '../components/VideoThumbnail';
 import VideoInfo from '../components/VideoInfo';
 import VideosData from '../data/VideosInfo';
@@ -19,7 +18,8 @@ import VideosData from '../data/VideosInfo';
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     headerStyle: {
-      backgroundColor: "#121212"
+      backgroundColor: "#121212",
+      borderBottomWidth: 0
     },
     headerLeft: <Image 
     source = {require('../assets/images/yt_logo_rgb_dark.png')}
@@ -46,6 +46,7 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+      <StatusBar barStyle="light-content" />
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
           <View style={styles.welcomeContainer}>
           {
