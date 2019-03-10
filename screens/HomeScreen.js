@@ -47,7 +47,14 @@ export default class HomeScreen extends React.Component {
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
           <View style={styles.welcomeContainer}>
-            <VideoThumbnail />
+            <VideoThumbnail
+              thumbnailUrl = "https://images.unsplash.com/photo-1498050108023-c5249f4df085" />
+            <VideoInfo />
+            <VideoThumbnail
+              thumbnailUrl = "https://images.unsplash.com/photo-1498050108023-c5249f4df085" />
+            <VideoInfo />
+            <VideoThumbnail
+              thumbnailUrl = "https://images.unsplash.com/photo-1470119693884-47d3a1d1f180" />
             <VideoInfo />
           </View>
         </ScrollView>
@@ -102,7 +109,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   contentContainer: {
-    paddingTop: 30,
+    paddingTop: 0,
   },
   welcomeContainer: {
     alignItems: 'center',
