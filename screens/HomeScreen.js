@@ -13,7 +13,8 @@ import { MonoText } from '../components/StyledText';
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import Icons from 'react-native-vector-icons/MaterialCommunityIcons'
 import VideoThumbnail from '../components/VideoThumbnail';
-import VideoInfo from '../components/VidoeInfo';
+import VideoInfo from '../components/VideoInfo';
+import VideosData from '../data/VideosInfo';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -47,15 +48,24 @@ export default class HomeScreen extends React.Component {
       <View style={styles.container}>
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
           <View style={styles.welcomeContainer}>
-            <VideoThumbnail
-              thumbnailUrl = "https://images.unsplash.com/photo-1498050108023-c5249f4df085" />
-            <VideoInfo />
-            <VideoThumbnail
-              thumbnailUrl = "https://images.unsplash.com/photo-1498050108023-c5249f4df085" />
-            <VideoInfo />
-            <VideoThumbnail
-              thumbnailUrl = "https://images.unsplash.com/photo-1470119693884-47d3a1d1f180" />
-            <VideoInfo />
+          {
+           VideosData.map((_data, i) => {
+             console.log(_data, i)
+                 return ( 
+                     <View key = {i} style={{flex:1}}>
+                         <VideoThumbnail 
+                          thumbnailUrl = {_data.videoInfo.videoThumbnailUrl}
+                          videoLength={_data.videoInfo.videoLength}
+                          />
+                          <VideoInfo
+                            videoTitle={_data.videoInfo.title}
+                            videoInfo={_data.videoInfo}
+                            channelName={_data.channelInfo.channelName}
+                            channelAvatarImage={_data.channelInfo.channelAvatarImage} />
+                     </View>
+                 );
+           })
+          }
           </View>
         </ScrollView>
       </View>
