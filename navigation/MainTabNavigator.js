@@ -1,9 +1,6 @@
 import React from 'react';
-import { Platform, View, Text } from 'react-native';
+import { View, Text } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
-import {
-  Ionicons
-} from '@expo/vector-icons';
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import TrendingScreen from '../screens/TrendingScreen';
@@ -51,7 +48,7 @@ SubscriptionsStack.navigationOptions = {
               focused={focused}
               name={'subscriptions'} size={20} style={{ color: tintColor}}
             />
-          <View
+         {focused ? null: <View
             style={{
               // /If you're using react-native < 0.57 overflow outside of the parent
               // will not work on Android, see https://git.io/fhLJ8
@@ -68,7 +65,7 @@ SubscriptionsStack.navigationOptions = {
             <Text style={{ color: 'white', fontSize: 10, fontWeight: 'bold' }}>
               
             </Text>
-          </View>
+         </View> }
         </View>
   ),
 };

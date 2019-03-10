@@ -36,7 +36,7 @@ export default class LinksScreen extends React.Component {
         <Text style={{textAlign:"center", color:"#fff"}}>Trending</Text>
       </View>
     );
-  }
+  } 
 }
 
 const styles = StyleSheet.create({
