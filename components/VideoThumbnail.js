@@ -16,7 +16,8 @@ export default class VideoInfo extends React.Component {
                 <View style={styles.thumbnail}>
                     <ImageBackground
                         style={styles.thumbnail}
-                        source = {{ uri: 'https://images.unsplash.com/photo-1551973932-8131a944f98e'}} />
+                        source = {{uri: this.props.thumbnailUrl}}
+                        />
                 <VideoLength 
                     style={styles.videoLengthText}
                     videoLength="4:58" />
@@ -42,9 +43,10 @@ const styles = StyleSheet.create({
         top: -35,
         backgroundColor: "black",
         color: "white",
-        borderRadius: 30,
-        padding: 5,
+        borderRadius: 3,
+        paddingHorizontal: 7,
         marginRight: 5,
         textAlign: "right",
+        overflow: "hidden",
     }
 });
