@@ -9,25 +9,20 @@ import {
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import Icons from 'react-native-vector-icons/MaterialCommunityIcons'
 
-export default class VidoeInfo extends Component {
+export default class VideoInfo extends Component {
   render() {
     return (
       <View style={styles.container}>
       <View style={styles.avatarContainer}>
-       <Image style={styles.avatarImage} source={require('../assets/images/yt_icon_rgb.png')} />
+       <Image style={styles.avatarImage} source={{uri: this.props.channelAvatarImage}} />
       </View>
 
       <View style={styles.titleTextContainer}>
         <Text style={styles.titleText}>
-          Building YouTube app (dark mode)
+          {this.props.videoTitle}
         </Text>
-
-        <Text style={styles.titleText}>
-          in React Native
-        </Text>
-
         <Text style={styles.descriptionText}>
-          ReactNative 1.1K views . 1 week ago
+          {this.props.channelName} {this.props.videoInfo.description.views} {this.props.videoInfo.description.uploadDate}
         </Text>
       </View>
       <View>
@@ -56,6 +51,7 @@ const styles = StyleSheet.create({
         width: 40,
         height: 40,
         borderRadius: 20,
+        margin: 0,
     },
     videoDescription:{
       fontWeight: '600',

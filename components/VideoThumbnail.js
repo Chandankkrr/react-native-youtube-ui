@@ -20,7 +20,7 @@ export default class VideoInfo extends React.Component {
                         />
                 <VideoLength 
                     style={styles.videoLengthText}
-                    videoLength="4:58" />
+                    videoLength={this.props.videoLength} />
             </View>
             </View>
          );
@@ -39,13 +39,12 @@ const styles = StyleSheet.create({
     },
     videoLengthText: {
         position: "absolute",
-        right: 0,
+        right: 20,
         top: -35,
         backgroundColor: "black",
         color: "white",
         borderRadius: 3,
         paddingHorizontal: 7,
-        marginRight: 5,
         textAlign: "right",
         overflow: "hidden",
     }
