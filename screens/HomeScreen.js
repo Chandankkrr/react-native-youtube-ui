@@ -49,7 +49,6 @@ export default class HomeScreen extends React.Component {
           <View style={styles.welcomeContainer}>
           {
            VideosData.map((_data, i) => {
-             console.log(_data, i)
                  return ( 
                      <View key = {i} style={{flex:1}}>
                          <VideoThumbnail 
