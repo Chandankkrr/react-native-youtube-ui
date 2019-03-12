@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-export default class LinksScreen extends React.Component {
+export default class TrendingScreen extends React.Component {
   static navigationOptions = {
     headerStyle: {
       backgroundColor: "#121212",
