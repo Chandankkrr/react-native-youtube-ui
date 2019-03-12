@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet, Text, Image, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-export default class SettingsScreen extends React.Component {
+export default class SubscriptionsScreen extends React.Component {
   static navigationOptions = {
     headerStyle: {
       backgroundColor: "#121212",
