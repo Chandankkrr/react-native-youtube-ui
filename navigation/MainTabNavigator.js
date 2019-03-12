@@ -10,6 +10,10 @@ import LibraryScreen from '../screens/LibraryScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
+}, {
+  defaultNavigationOptions: {
+    header: null
+  }
 });
 
 HomeStack.navigationOptions = {
@@ -24,6 +28,10 @@ HomeStack.navigationOptions = {
 
 const TrendingStack = createStackNavigator({
   Trending: TrendingScreen,
+}, {
+  defaultNavigationOptions: {
+    header: null
+  }
 });
 
 TrendingStack.navigationOptions = {
@@ -38,6 +46,10 @@ TrendingStack.navigationOptions = {
 
 const SubscriptionsStack = createStackNavigator({
   Subscriptions: SubscriptionsScreen,
+}, {
+  defaultNavigationOptions: {
+    header: null
+  }
 });
 
 SubscriptionsStack.navigationOptions = {
@@ -72,6 +84,10 @@ SubscriptionsStack.navigationOptions = {
 
 const InboxStack = createStackNavigator({
   Inbox: InboxScreen,
+},{
+  defaultNavigationOptions:{
+    header: null
+  }
 });
 
 InboxStack.navigationOptions = {
@@ -86,6 +102,10 @@ InboxStack.navigationOptions = {
 
 const LibraryStack = createStackNavigator({
   Library: LibraryScreen,
+}, {
+  defaultNavigationOptions: {
+    header: null
+  }
 });
 
 LibraryStack.navigationOptions = {
