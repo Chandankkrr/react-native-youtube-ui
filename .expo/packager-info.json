@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 41127,
+  "packagerPort": 19009,
+  "packagerPid": 56470,
   "expoServerNgrokUrl": "https://69-jkf.chandankkrr.react-native-youtube-ui.exp.direct",
   "packagerNgrokUrl": "https://packager.69-jkf.chandankkrr.react-native-youtube-ui.exp.direct",
-  "ngrokPid": 41161
+  "ngrokPid": 56502
 }
