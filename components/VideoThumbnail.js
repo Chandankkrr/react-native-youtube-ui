@@ -8,7 +8,7 @@ import {
 
 import VideoLength from './VideoLength';
 
-export default class VideoInfo extends React.Component {
+export default class VideoThumbnail extends React.Component {
 
     render() { 
         return ( 
